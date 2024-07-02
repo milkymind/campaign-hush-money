@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pad"></div>
+  <div class="pad"></div>
+  <div class="pad"></div>
+  <h1>Hush Money Meme Maker</h1>
+  <div>
+    <p>
+      Steps:<br>
+    1. Upload image file.<br>
+    2. Click Trumptardio add him to canvas.<br>
+    3. Edit Trumptardio's position, rotation, and scale.<br>
+    4. Download your Trumpatardio Meme.<br>
+    </p>
+    </div>
+    <div>
+      <input type="file" id="uploadInput" accept="image/*">
+  </div>
+  <div id="editModes" class="carousel">
+    <label>
+      <input type="radio" name="editMode" id="positionButton" checked>
+      Position
+    </label>
+    <label>
+      <input type="radio" name="editMode" id="rotationButton">
+      Rotation
+    </label>
+    <label>
+      <input type="radio" name="editMode" id="scaleButton">
+      Scale
+    </label>
+  </div>
+  <canvas id="imageCanvas" width="400" height="400"></canvas>
+  <div id="templateCarousel" class="carousel">
+    <!-- Template images will be added dynamically by JavaScript -->
+  </div>
+  <div class="button-container">
+    <button id="downloadButton">Download Trumptardio Meme</button>
+    <button id="deleteButton">Delete Trumptardio</button>
+  </div>
+  <div class="pad"></div>
+  <script src="script.js"></script>
+</body>
+</body>
+</html>

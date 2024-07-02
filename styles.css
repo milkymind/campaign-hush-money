@@ -1,0 +1,111 @@
+html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to allow scrolling */
+    background-color: #3b3b3b;
+    min-height: 100vh; /* Changed from height to min-height */
+    margin: 0;
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    max-width: 100%; 
+      /* margin-bottom: 10px; */
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.carousel img {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.pad {
+    padding: 10px;
+}
+
+
+canvas {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 0 1 auto; /* Allow buttons to shrink if needed */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .carousel img {
+        max-width: 80px; /* Slightly smaller images on mobile */
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%; /* Full-width buttons on very small screens */
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        flex-wrap: wrap; /* Allow wrapping on very small screens */
+        justify-content: flex-start;
+    }
+
+    .carousel img {
+        max-width: 60px; /* Even smaller images on very small screens */
+        margin: 5px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%; /* Full-width buttons on very small screens */
+        margin-top: 5px;
+    }
+}
